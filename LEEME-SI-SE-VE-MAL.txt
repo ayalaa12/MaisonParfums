@@ -1,0 +1,7 @@
+Si esta versión se ve sin estilos o sin imágenes, significa que index.html se abrió
+sin sus carpetas css, js, data o assets.
+
+Solución:
+1. Extrae toda la carpeta.
+2. No muevas index.html fuera de ella.
+3. O utiliza ../index.html, que es la versión autónoma.
