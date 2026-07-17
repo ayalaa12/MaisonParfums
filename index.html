@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Maison Parfums: boutique digital de perfumería árabe, nicho y de diseñador en México.">
+  <meta name="maison-build" content="host-compatible-v8">
+  <meta name="theme-color" content="#faf9f7">
+  <title>Maison Parfums</title>
+  <link rel="stylesheet" href="css/styles.css?v=8">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="announcement"><span>Envío gratuito desde $2,000 MXN</span><span>Perfumes originales</span><span>Entrega estimada de 3 a 7 días hábiles</span></div>
+  <header class="site-header">
+    <div class="header-grid">
+      <button class="mobile-menu-button icon-button" id="mobileMenuButton" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+      <nav class="primary-nav" aria-label="Navegación principal">
+        <a class="home-nav-link" data-nav="home" href="#/inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8"></path><path d="M5.5 9.5V21h13V9.5"></path><path d="M9.5 21v-6h5v6"></path></svg><span>Inicio</span></a><a data-nav="arabes" href="#/catalogo?categoria=Árabes">Árabes</a><a data-nav="nicho" href="#/catalogo?categoria=Nicho">Nicho</a><a data-nav="disenador" href="#/catalogo?categoria=Diseñador">Diseñador</a><a data-nav="hombre" href="#/genero/hombre">Hombre</a><a data-nav="mujer" href="#/genero/mujer">Mujer</a><a data-nav="unisex" href="#/genero/unisex">Unisex</a><a data-nav="colecciones" href="#/colecciones">Colecciones Maison</a><a data-nav="quiz" href="#/quiz">Quiz</a>
+      </nav>
+      <a class="brand" href="#/inicio" aria-label="Maison Parfums, inicio">Maison Parfums</a>
+      <div class="header-actions">
+        <button class="icon-button" id="searchButton" aria-label="Buscar"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.8"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
+        <a class="icon-button account-button" href="#/cuenta" aria-label="Cuenta"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"></circle><path d="M5.5 20c.8-4 3-6 6.5-6s5.7 2 6.5 6"></path></svg></a>
+        <a class="icon-button" href="#/wishlist" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.6 5.8c-1.8-1.9-4.8-1.9-6.6 0L12 7.9 10 5.8c-1.8-1.9-4.8-1.9-6.6 0-1.9 2-1.9 5.1 0 7.1L12 21l8.6-8.1c1.9-2 1.9-5.1 0-7.1Z"></path></svg><span class="counter" id="wishlistCount">0</span></a>
+        <button class="icon-button" id="cartHeaderButton" aria-label="Carrito"><svg viewBox="0 0 24 24"><path d="M6.5 8.5h11l1 12h-13l1-12Z"></path><path d="M9 9V6.5a3 3 0 0 1 6 0V9"></path></svg><span class="counter" id="cartCount">0</span></button>
+      </div>
+    </div>
+    <div class="mobile-drawer" id="mobileDrawer" hidden>
+      <a class="mobile-home-link" data-nav="home" href="#/inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8"></path><path d="M5.5 9.5V21h13V9.5"></path><path d="M9.5 21v-6h5v6"></path></svg><span>Inicio</span></a><a data-nav="arabes" href="#/catalogo?categoria=Árabes">Perfumes árabes</a><a data-nav="nicho" href="#/catalogo?categoria=Nicho">Perfumes nicho</a><a data-nav="disenador" href="#/catalogo?categoria=Diseñador">Perfumes de diseñador</a><a data-nav="hombre" href="#/genero/hombre">Hombre</a><a data-nav="mujer" href="#/genero/mujer">Mujer</a><a data-nav="unisex" href="#/genero/unisex">Unisex</a><a href="#/wishlist">Wishlist</a><a href="#/cuenta">Mi cuenta</a><a href="#/marcas">Marcas</a><a data-nav="colecciones" href="#/colecciones">Colecciones Maison</a><a data-nav="quiz" href="#/quiz">Encuentra tu perfume ideal</a><a href="#/nosotros">Nosotros</a><a href="#/contacto">Contacto</a>
+    </div>
+    <div class="search-panel" id="searchPanel" hidden>
+      <div class="search-inner"><div class="search-heading"><label for="globalSearchInput">Buscar perfumes y marcas</label><button class="icon-button" id="closeSearchButton" aria-label="Cerrar búsqueda">×</button></div><input id="globalSearchInput" type="search" autocomplete="off" placeholder="Ej. Khamrah, Lattafa, vainilla, perfume nicho"><div id="searchSuggestions" class="search-suggestions"></div></div>
+    </div>
+  </header>
+  <main id="contenido" tabindex="-1"></main>
+  <aside class="side-panel" id="sidePanel" aria-hidden="true"><div class="side-panel-header"><div><span class="eyebrow">Tu selección</span><h2>Tu carrito</h2></div><button class="icon-button" id="closeSidePanel" aria-label="Cerrar carrito">×</button></div><div id="sidePanelContent"></div></aside><div class="overlay" id="overlay" hidden></div>
+  <div class="modal" id="newsletterModal" hidden><div class="modal-card"><button class="modal-close icon-button" data-close-modal="newsletterModal" aria-label="Cerrar">×</button><span class="eyebrow">Bienvenido a Maison Parfums</span><h2>10% en tu primera compra</h2><p>Recibe inspiración olfativa, selecciones Maison y tu código de bienvenida.</p><form id="newsletterModalForm"><input type="email" name="email" required placeholder="Tu correo electrónico"><button class="button button-dark button-wide" type="submit">Obtener mi descuento</button></form><small>Al suscribirte aceptas el aviso de privacidad y autorizas el uso de tu correo para novedades, lanzamientos y promociones de Maison Parfums.</small></div></div>
+  <div class="cookie-banner" id="cookieBanner"><p>Usamos almacenamiento local para recordar tu carrito, wishlist y preferencias.</p><button class="button button-dark" id="acceptCookies">Entendido</button></div>
+  <footer class="site-footer">
+    <div class="footer-brand-area"><a class="brand footer-brand" href="#/inicio">Maison Parfums</a><p>Perfumería árabe, nicho y de diseñador seleccionada para descubrir y elegir con confianza.</p><div class="social-links"><a class="social-link" href="https://www.instagram.com/ayalax.jc?igsh=NmNwYnZtd2VtMW5p&utm_source=qr" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"></circle></svg><span>Instagram</span></a><a class="social-link" href="https://www.tiktok.com/@julioo.cas?_r=1&_t=ZS-983qPD7FVGU" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 3v11.2a4.7 4.7 0 1 1-4-4.65"></path><path d="M14.5 3c.7 3.1 2.5 4.7 5.5 5"></path></svg><span>TikTok</span></a></div></div>
+    <div><h3>Comprar</h3><a href="#/genero/hombre">Hombre</a><a href="#/genero/mujer">Mujer</a><a href="#/genero/unisex">Unisex</a><a href="#/marcas">Marcas</a><a href="#/colecciones">Colecciones Maison</a></div>
+    <div><h3>Maison</h3><a href="#/nosotros">Nosotros</a><a href="#/quiz">Encuentra tu perfume ideal</a><a href="#/contacto">Contacto</a><a href="#/faq">Preguntas frecuentes</a></div>
+    <div><h3>Información</h3><a href="#/envios">Política de envíos</a><a href="#/devoluciones">Cambios e incidencias</a><a href="#/privacidad">Aviso de privacidad</a><a href="#/terminos">Términos y condiciones</a></div>
+    <div><h3>Compra clara</h3><p>Precios con IVA incluido, envío gratuito desde $2,000 MXN y compra como invitado.</p><a href="#/envios">Consultar envíos</a></div>
+  </footer>
+
+  <noscript><div class="fatal-app-message">Maison Parfums necesita JavaScript activado para usar el catálogo, filtros, carrito y wishlist.</div></noscript>
+  <div class="app-loading" id="appLoading" role="status">Cargando Maison Parfums…</div>
+  <script defer src="js/maison.bundle.js?v=8"></script>
+</body>
+</html>
